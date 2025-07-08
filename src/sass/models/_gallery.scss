@@ -1,0 +1,38 @@
+main {
+    min-height: 100vh;
+}
+
+.gallery {
+    padding: 24px;
+    display: grid;
+    grid-row-gap: 40px;
+
+    &__picture {
+        position: relative;
+    }
+
+    &__img {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    &__texts {
+        position: absolute;
+        left: 32px;
+        bottom: 32px;
+        color: #fff;
+        line-height: 1.25;
+    }
+
+    &__name {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    &__author {
+        opacity: 0.75;
+        font-size: 13px;
+        font-weight: 400;
+        margin-top: 8px;
+    }
+    
+}
