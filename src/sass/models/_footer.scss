@@ -1,0 +1,45 @@
+@use 'variables';
+.carrusel {
+    &__options {
+        display: flex;
+    }
+    &__option {
+        width: 25px; height: 1px; 
+        background-color: variables.$grey-150;
+        &--active {
+            background-color: #000;
+        }
+    }
+    &__select {
+        padding: 16px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__name {
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 2;
+        letter-spacing: -0.25px;
+    }
+
+    &__propety {
+        font-size: 10px;
+        line-height: 1.2;
+        font-weight: 400;
+        opacity: 0.75;
+    }
+
+    &__arrows {
+        display: flex;
+        gap: 24px;
+    }
+    &__arrow {
+        color: variables.$grey-150;
+    }
+
+    &__arrow--active {
+        color: #000;
+    }
+
+}

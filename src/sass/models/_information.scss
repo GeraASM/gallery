@@ -1,0 +1,103 @@
+@use 'variables';
+.information {
+    padding: 24px;
+
+    &__figure {
+        height: 280px;
+        position: relative;
+        &--stretch {
+            width: 327px;
+            position: fixed;
+            top: 30%; left: 50%;
+            transform: translate(-50%);
+            box-shadow: 0 0 0 100vmax #000000d5;
+            z-index: 2;
+        }
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__view {
+        cursor: pointer;
+        position: absolute;
+        top: 16px; left: 16px;
+        z-index: 1;
+        padding: 14px 16px;
+        background-color: #000;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        font-size: 10px;
+        font-weight: bold;
+        line-height: 1.2;
+        letter-spacing: 2px;
+        .stretch {
+            display: inline-block;
+            margin-right: 1rem;
+            object-fit: contain;
+        }
+    }
+
+    &__texts {
+
+    }
+    &__personal {
+        padding: 24px;
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.25;
+    }
+
+    &__author {
+        color: variables.$grey-400;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 1.35;
+        margin-top: 8px;
+    }
+    &__photograph {
+        width: 64px; height: 64px;
+        transform: translateX(10px);
+    }
+
+    &__description {
+        padding: 64px 0;
+        position: relative;
+    }
+
+    &__year {
+        position: absolute;
+        top: 0; right: 0;
+        color: variables.$grey-100;
+        font-size: 100px;
+        font-weight: bold;
+        line-height: 1;
+    }
+
+    &__text {
+        position: relative;
+        z-index: 1;
+        font-weight: bold;
+        font-size: 14px;
+        color: variables.$grey-400;
+        line-height: 2;
+        letter-spacing: -0.25px;
+    }
+
+    &__source {
+        display: block;
+        color: variables.$grey-400;
+        line-height: 1.25;
+        letter-spacing: 2px;
+        font-size: 9px;
+        font-weight: bold;
+        margin-top: 64px;
+        text-decoration: none;
+        letter-spacing: 2px;
+    }
+}
