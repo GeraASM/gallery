@@ -31,6 +31,7 @@ img {
   line-height: 1.25;
   letter-spacing: 2px;
   color: #7D7D7D;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .header__start {
@@ -38,10 +39,18 @@ img {
     letter-spacing: 2.5px;
   }
 }
+.header__start:hover {
+  color: #000;
+}
 
 main {
   min-height: 100vh;
   width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  main {
+    min-height: auto;
+  }
 }
 
 .gallery {
@@ -63,6 +72,9 @@ main {
     padding: 40px;
     grid-template-columns: repeat(4, 310px);
   }
+}
+.gallery__redirection {
+  display: block;
 }
 .gallery__picture {
   position: relative;
@@ -157,22 +169,81 @@ main {
 }
 .information {
   padding: 24px;
+  position: relative;
+  max-width: 375px;
+  margin-inline: auto;
+}
+@media screen and (min-width: 768px) {
+  .information {
+    padding: 40px 32px 0;
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .information {
+    padding: 96px 32px 80px;
+    display: grid;
+    grid-template-columns: 1fr 476px;
+    grid-template-rows: 624px;
+    max-width: 1360px;
+  }
 }
 .information__figure {
   height: 280px;
   position: relative;
 }
 .information__figure--stretch {
+  opacity: 0;
   width: 327px;
   position: fixed;
-  top: 30%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%);
-  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.8352941176);
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.9215686275);
   z-index: 2;
+}
+@media screen and (min-width: 768px) {
+  .information__figure--stretch {
+    width: 670px;
+    height: 520px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .information__figure--stretch {
+    width: auto;
+    height: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .information__figure {
+    width: 475px;
+    height: 560px;
+    margin-bottom: 64px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .information__figure {
+    margin-bottom: 0;
+  }
+}
+.information__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-decoration: none;
+  color: #fff;
+  line-height: 2;
+  font-size: 14px;
+  letter-spacing: -0.25px;
+  transform: translateY(-40px);
 }
 .information__img {
   width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .information__img {
+    object-fit: contain;
+  }
 }
 .information__view {
   cursor: pointer;
@@ -189,19 +260,60 @@ main {
   font-weight: bold;
   line-height: 1.2;
   letter-spacing: 2px;
+  text-decoration: none;
 }
 .information__view .stretch {
   display: inline-block;
   margin-right: 1rem;
   object-fit: contain;
 }
+@media screen and (min-width: 768px) {
+  .information__view {
+    bottom: 16px;
+    top: auto;
+  }
+}
+.information__texts {
+  position: absolute;
+  z-index: 1;
+  width: 282px;
+}
+@media screen and (min-width: 768px) {
+  .information__texts {
+    top: 40px;
+    right: 32px;
+    width: 445px;
+    height: 236px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .information__texts {
+    top: 96px;
+    left: 32px;
+    right: auto;
+    transform: translateX(80%);
+    height: 624px;
+  }
+}
 .information__personal {
   padding: 24px;
+  background-color: #fff;
+}
+@media screen and (min-width: 768px) {
+  .information__personal {
+    padding: 0 56px 64px;
+  }
 }
 .information__title {
   font-size: 24px;
   font-weight: bold;
   line-height: 1.25;
+}
+@media screen and (min-width: 768px) {
+  .information__title {
+    font-size: 56px;
+    line-height: 1.15;
+  }
 }
 .information__author {
   color: #7D7D7D;
@@ -210,14 +322,54 @@ main {
   line-height: 1.35;
   margin-top: 8px;
 }
+@media screen and (min-width: 768px) {
+  .information__author {
+    margin-top: 16px;
+  }
+}
 .information__photograph {
   width: 64px;
   height: 64px;
   transform: translateX(10px);
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .information__photograph {
+    transform: translate(0, 6px);
+    width: 128px;
+    height: 128px;
+    display: block;
+    margin-left: auto;
+    margin-right: 56px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .information__photograph {
+    position: absolute;
+    transform: translateY(0px);
+    bottom: 0;
+    left: 32%;
+    object-fit: contain;
+  }
 }
 .information__description {
   padding: 64px 0;
   position: relative;
+  margin-top: 200px;
+}
+@media screen and (min-width: 768px) {
+  .information__description {
+    margin-top: 0;
+    padding-bottom: 56px;
+    width: 457px;
+    margin-inline: auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .information__description {
+    width: 350px;
+    padding-top: 100px;
+  }
 }
 .information__year {
   position: absolute;
@@ -227,6 +379,19 @@ main {
   font-size: 100px;
   font-weight: bold;
   line-height: 1;
+  z-index: 1;
+}
+@media screen and (min-width: 768px) {
+  .information__year {
+    left: 0;
+    font-size: 200px;
+    transform: translateX(-30%);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .information__year {
+    transform: translateX(-10%);
+  }
 }
 .information__text {
   position: relative;
@@ -248,6 +413,14 @@ main {
   text-decoration: none;
   letter-spacing: 2px;
 }
+.information__source:hover {
+  color: #000;
+}
+@media screen and (min-width: 1024px) {
+  .information__source {
+    margin-top: 72px;
+  }
+}
 
 .carrusel__options {
   display: flex;
@@ -255,10 +428,16 @@ main {
 .carrusel__option {
   width: 25px;
   height: 1px;
+  flex-grow: 1;
   background-color: #E5E5E5;
 }
 .carrusel__option--active {
   background-color: #000;
+}
+@media screen and (min-width: 768px) {
+  .carrusel__option {
+    width: 52px;
+  }
 }
 .carrusel__select {
   padding: 16px 24px;
@@ -266,11 +445,22 @@ main {
   align-items: center;
   justify-content: space-between;
 }
+@media screen and (min-width: 768px) {
+  .carrusel__select {
+    padding: 24px 40px;
+  }
+}
 .carrusel__name {
   font-size: 14px;
   font-weight: bold;
   line-height: 2;
   letter-spacing: -0.25px;
+}
+@media screen and (min-width: 768px) {
+  .carrusel__name {
+    font-size: 18px;
+    line-height: 1.25;
+  }
 }
 .carrusel__propety {
   font-size: 10px;
@@ -283,10 +473,14 @@ main {
   gap: 24px;
 }
 .carrusel__arrow {
+  color: #000;
+  cursor: pointer;
+}
+.carrusel__arrow:hover {
   color: #E5E5E5;
 }
-.carrusel__arrow--active {
-  color: #000;
+.carrusel__arrow--deactive {
+  color: #E5E5E5;
 }
 
 /*# sourceMappingURL=main.css.map */

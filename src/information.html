@@ -19,31 +19,24 @@
     <main>
         <section class="information">
             <figure class="information__figure">
-                <img src="./assets/starry-night/hero-small.jpg" alt="Starry" class="information__img information__img--stretch">
-                <a class="information__view"><img src="./assets/shared/icon-view-image.svg" alt="View" class="stretch"> VIEW IMAGE</a>
+                <img id="image" src="./assets/starry-night/hero-large.jpg" alt="Starry" class="information__img information__img--stretch">
+                <a id="view" href="#" class="information__view"><img src="./assets/shared/icon-view-image.svg" alt="View" class="stretch"> VIEW IMAGE</a>
             </figure>
             <!-- Information show -->
-            <figure class="information__figure--stretch">
-                <img src="./assets/starry-night/hero-small.jpg" alt="Starry" class="information__img information__img--stretch">
+            <figure  id="overImg" class="information__figure--stretch">
+                <a id="close" href="#" class="information__close">CLOSE</a>
+                <img src="./assets/starry-night/hero-small.jpg" alt="Starry" class="information__img">
             </figure>
             <section class="information__texts">
                 <div class="information__personal">
-                    <h1 class="information__title">Starry Night</h1>
-                    <p class="information__author">Vincent Van Gogh</p>
+                    <h1 id="title" class="information__title"></h1>
+                    <p id="author" class="information__author"></p>
                 </div>
-                <img src="./assets/starry-night/artist.jpg" alt="Vicent Van Gogh" class="information__photograph">
+                <img id="authorImg" src="./assets/starry-night/artist.jpg" alt="Vicent Van Gogh" class="information__photograph">
             </section>
             <section class="information__description">
-                <h2 class="information__year">1889</h2>
-                <p class="information__text">
-                                        Although The Starry Night was painted during the day in Van Gogh's ground-floor 
-                    studio, it would be inaccurate to state that the picture was painted from memory. 
-                    The view has been identified as the one from his bedroom window, facing east, a 
-                    view which Van Gogh painted variations of no fewer than twenty-one times, including 
-                    The Starry Night. "Through the iron-barred window," he wrote to his brother, Theo, 
-                    around 23 May 1889, "I can see an enclosed square of wheat ... above which, in the 
-  morning, I watch the sun rise in all its glory."
-                </p>
+                <h2 id="year" class="information__year"></h2>
+                <p id="information" class="information__text">hola</p>
                 <a href="#" class="information__source">GO TO SOURCE</a>
             </section>
 
@@ -68,16 +61,16 @@
             </div>
             <section class="carrusel__select">
                 <div class="carrusel__information">
-                    <h3 class="carrusel__name">Starry Night</h3>
-                    <h4 class="carrusel__propety">Vicent Van Gogh</h4>
+                    <h3 id="nameFooter" class="carrusel__name"></h3>
+                    <h4 id="authorFooter" class="carrusel__propety"></h4>
                 </div>
                 <div class="carrusel__arrows">
-                    <svg class="carrusel__arrow" width="26" height="24" xmlns="http://www.w3.org/2000/svg"><g stroke="currentColor" fill="none" fill-rule="evenodd"><path d="M24.166 1.843L3.627 12.113l20.539 10.269V1.843z" stroke-width="2"/><path fill="#D8D8D8" d="M.986.5h-1v22.775h1z"/></g></svg>
-                    <svg class="carrusel__arrow carrusel__arrow--active" width="26" height="24" xmlns="http://www.w3.org/2000/svg"><g stroke="currentColor" fill="none" fill-rule="evenodd"><path d="M1.528 1.843l20.538 10.27L1.528 22.382V1.843z" stroke-width="2"/><path fill="#D8D8D8" d="M24.708.5h1v22.775h-1z"/></g></svg>
+                    <svg id="back" class="carrusel__arrow carrusel__arrow--deactive" width="26" height="24" xmlns="http://www.w3.org/2000/svg"><g stroke="currentColor" fill="none" fill-rule="evenodd"><path d="M24.166 1.843L3.627 12.113l20.539 10.269V1.843z" stroke-width="2"/><path fill="#D8D8D8" d="M.986.5h-1v22.775h1z"/></g></svg>
+                    <svg id="next" class="carrusel__arrow" width="26" height="24" xmlns="http://www.w3.org/2000/svg"><g stroke="currentColor" fill="none" fill-rule="evenodd"><path d="M1.528 1.843l20.538 10.27L1.528 22.382V1.843z" stroke-width="2"/><path fill="#D8D8D8" d="M24.708.5h1v22.775h-1z"/></g></svg>
                 </div>
             </section>
         </foooter>
     </main>
-    <script src="./js/script.js"></script>
+    <script src="./js/showInformation.js"></script>
 </body>
 </html>

@@ -5,9 +5,13 @@
     }
     &__option {
         width: 25px; height: 1px; 
+        flex-grow: 1;
         background-color: variables.$grey-150;
         &--active {
             background-color: #000;
+        }
+        @media screen and (min-width: 768px) {
+            width: 52px;
         }
     }
     &__select {
@@ -15,12 +19,18 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @media screen and (min-width: 768px) {
+            padding: 24px 40px;
+        }
     }
     &__name {
         font-size: 14px;
         font-weight: bold;
         line-height: 2;
         letter-spacing: -0.25px;
+        @media screen and (min-width: 768px) {
+            font-size: 18px; line-height: 1.25;
+        }
     }
 
     &__propety {
@@ -35,11 +45,15 @@
         gap: 24px;
     }
     &__arrow {
-        color: variables.$grey-150;
-    }
-
-    &__arrow--active {
         color: #000;
+        cursor: pointer;
+        &:hover {
+            color: variables.$grey-150;
+        }
+    }
+    
+    &__arrow--deactive {
+        color: variables.$grey-150;
     }
 
 }

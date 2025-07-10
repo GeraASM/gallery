@@ -17,9 +17,13 @@
         line-height: 1.25;
         letter-spacing: 2px;
         color: variables.$grey-400;
+        cursor: pointer;
         @media screen and (min-width: 768px) {
             font-size: 12px;
             letter-spacing: 2.5px;
+        }
+        &:hover {
+            color: #000;
         }
     }
 }

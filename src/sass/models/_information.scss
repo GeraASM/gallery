@@ -1,22 +1,66 @@
 @use 'variables';
 .information {
     padding: 24px;
-
+    position: relative;
+    max-width: 375px;
+    margin-inline: auto;
+    @media screen and (min-width: 768px) {
+        padding: 40px 32px 0;
+        max-width: 100%;
+    }
+    @media screen and (min-width: 1024px) {
+        padding: 96px 32px 80px;
+        display: grid;
+        grid-template-columns: 1fr 476px;
+        grid-template-rows: 624px;
+        max-width: 1360px;
+    }
     &__figure {
         height: 280px;
         position: relative;
         &--stretch {
+            opacity: 0;
             width: 327px;
             position: fixed;
-            top: 30%; left: 50%;
+            top: 20%; left: 50%;
             transform: translate(-50%);
-            box-shadow: 0 0 0 100vmax #000000d5;
+            box-shadow: 0 0 0 100vmax #000000eb;
             z-index: 2;
+            @media screen and (min-width: 768px) {
+                width: 670px;
+                height: 520px;
+            }
+            @media screen and (min-width: 1024px) {
+                width: auto;
+                height: auto;
+            }
         }
+
+        @media screen and (min-width: 768px) {
+            width: 475px; height: 560px;
+            margin-bottom: 64px;
+        }
+        @media screen and (min-width: 1024px) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: 0; right: 0;
+        text-decoration: none;
+        color: #fff;
+        line-height: 2;
+        font-size: 14px;
+        letter-spacing: -0.25px;
+        transform: translateY(-40px);
     }
 
     &__img {
         width: 100%;
+        @media screen and (min-width: 768px) {
+            object-fit: contain;
+        }
     }
 
     &__view {
@@ -33,24 +77,46 @@
         font-weight: bold;
         line-height: 1.2;
         letter-spacing: 2px;
+        text-decoration: none;
         .stretch {
             display: inline-block;
             margin-right: 1rem;
             object-fit: contain;
         }
+        @media screen and (min-width: 768px) {
+            bottom: 16px; top: auto;
+        }
     }
 
     &__texts {
-
+        position: absolute;
+        z-index: 1;
+        width: 282px;
+        @media screen and (min-width: 768px) {
+            top: 40px; right: 32px;
+            width: 445px; height: 236px;
+        }
+        @media screen and (min-width: 1024px) {
+            top: 96px; left: 32px; right: auto;
+            transform: translateX(80%);
+            height: 624px;
+        }
     }
     &__personal {
         padding: 24px;
+        background-color: #fff;
+        @media screen and (min-width: 768px) {
+            padding: 0 56px 64px;
+        }
     }
 
     &__title {
         font-size: 24px;
         font-weight: bold;
         line-height: 1.25;
+        @media screen and (min-width: 768px) {
+            font-size: 56px; line-height: 1.15;
+        }
     }
 
     &__author {
@@ -59,15 +125,44 @@
         font-size: 15px;
         line-height: 1.35;
         margin-top: 8px;
+        @media screen and (min-width: 768px) {
+            margin-top: 16px;
+        }
     }
     &__photograph {
         width: 64px; height: 64px;
         transform: translateX(10px);
+        display: block;
+        @media screen and (min-width: 768px) {
+            transform: translate(0, 6px);
+            width: 128px; height: 128px;
+            display: block;
+            margin-left: auto;
+            margin-right: 56px;
+        }
+        @media screen and (min-width: 1024px) {
+            position: absolute;
+            transform: translateY(0px);
+            bottom: 0;
+            left: 32%;
+            object-fit: contain;
+        }
     }
 
     &__description {
         padding: 64px 0;
         position: relative;
+        margin-top: 200px;
+        @media screen and (min-width: 768px) {
+            margin-top: 0;
+            padding-bottom: 56px;
+            width: 457px;
+            margin-inline: auto;
+        }
+        @media screen and (min-width: 1024px) {
+            width: 350px;
+            padding-top: 100px;
+        }
     }
 
     &__year {
@@ -77,6 +172,15 @@
         font-size: 100px;
         font-weight: bold;
         line-height: 1;
+        z-index: 1;
+        @media screen and (min-width: 768px) {
+            left: 0;
+            font-size: 200px;
+            transform: translateX(-30%);
+        }
+        @media screen and (min-width: 1024px) {
+            transform: translateX(-10%);
+        }
     }
 
     &__text {
@@ -99,5 +203,11 @@
         margin-top: 64px;
         text-decoration: none;
         letter-spacing: 2px;
+        &:hover {
+            color: #000;
+        }
+        @media screen and (min-width: 1024px) {
+            margin-top: 72px;
+        }
     }
 }
